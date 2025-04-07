@@ -60,7 +60,7 @@ daily_sales = df_filtered.groupby('Date')['Total_Sales'].sum()
 st.plotly_chart(px.line(daily_sales, title="Daily Sales Trend"))
 
 # Customer Segmentation (KMeans Clustering)
-st.subheader("Customer Segmentation")
+st.subheader("Customer Segmentation using KMeans Clustering")
 cust_df = df_filtered.groupby('Customer ID').agg({
     'Total_Sales': 'sum',
     'Quantity': 'sum',
